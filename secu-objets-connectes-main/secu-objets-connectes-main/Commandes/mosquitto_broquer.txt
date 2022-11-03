@@ -1,0 +1,11 @@
+mosquitto -v -c CONFIG_FILE -p PORT
+
+mosquitto_passwd -c /etc/mosquitto/passwd username
+
+mosquitto_passwd -b passwordfile username password
+
+// Publier manuellement
+C:\Program Files\mosquitto\mosquitto_pub.exe -h 172.16.32.7 -p 8883 -t "isima/" -m "COUCOU"
+
+// Journal du broker
+tail -f /var/log/mosquitto/mosquitto.log
